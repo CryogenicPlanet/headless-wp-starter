@@ -32,6 +32,7 @@ RUN sudo -u www-data composer global require \
 RUN chown -R www-data:www-data /var/www/html
 
 # include composer-installed executables in $PATH
+RUN chown -R www-data:www-data /var/www/html
 ENV PATH="/var/www/.composer/vendor/bin:${PATH}"
 
 EXPOSE 8080
